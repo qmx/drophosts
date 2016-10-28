@@ -1,5 +1,5 @@
-hash: 8a9a8576d1e948417400cbb5550951a78629a03e5b7158d12ae609f530e1b165
-updated: 2016-10-28T00:41:07.996769553-02:00
+hash: e163c774b5c0f888089ef41663d0c0ae4bad2719eb2ecf821568480d25101470
+updated: 2016-10-28T11:11:47.397662711-02:00
 imports:
 - name: github.com/digitalocean/godo
   version: 2ff8a02a86cd6918b384a5000ceebe886844fbce
@@ -11,6 +11,8 @@ imports:
   version: 9235644dd9e52eeae6fa48efd539fdc351a0af53
   subpackages:
   - query
+- name: github.com/stretchr/testify
+  version: 69483b4bd14f5845b5a1e55bca19e954e827f1d0
 - name: github.com/tent/http-link-go
   version: ac974c61c2f990f4115b119354b5e0b47550e888
 - name: golang.org/x/net

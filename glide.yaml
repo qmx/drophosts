@@ -3,3 +3,5 @@ import:
 - package: github.com/digitalocean/godo
   version: 2ff8a02a86cd6918b384a5000ceebe886844fbce
 - package: golang.org/x/oauth2
+- package: github.com/stretchr/testify
+  version: ^1.1.4
