@@ -1,0 +1,4 @@
+package: .
+import:
+- package: github.com/digitalocean/godo
+  version: ^0.9.0
