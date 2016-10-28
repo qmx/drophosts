@@ -1,6 +1,8 @@
-hash: 043d63af1d81da3b8db518cc15e0008d0e95fff39b2375f94716ade7e4094a9c
-updated: 2016-10-27T22:59:41.929123447-02:00
+hash: defb4c3b48b497e08694aca1d0a14f5f0de803de8ed8a99e01cd4381a02f5c4d
+updated: 2016-10-27T23:12:49.560161197-02:00
 imports:
 - name: github.com/digitalocean/godo
   version: 2a0d64a42bb60a95677748a4d5729af6184330b4
+- name: golang.org/x/oauth2
+  version: 25b4fb1468cb89700c7c060cb99f30581a61f5e3
 testImports: []
