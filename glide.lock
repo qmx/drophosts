@@ -1,8 +1,36 @@
-hash: defb4c3b48b497e08694aca1d0a14f5f0de803de8ed8a99e01cd4381a02f5c4d
-updated: 2016-10-27T23:12:49.560161197-02:00
+hash: d820affb8461ead7b0a19b468e64b33c59ea0a3ec75ed4f0b158f43ea0cac139
+updated: 2016-10-28T00:01:25.827752572-02:00
 imports:
+- name: github.com/digitalocean/go-metadata
+  version: a6cf11fb1bf59df1976e32f3c5facf33f74fbfe9
 - name: github.com/digitalocean/godo
   version: 2a0d64a42bb60a95677748a4d5729af6184330b4
+- name: github.com/golang/protobuf
+  version: 98fa357170587e470c5f27d3c3ea0947b71eb455
+  subpackages:
+  - proto
+- name: github.com/google/go-querystring
+  version: 9235644dd9e52eeae6fa48efd539fdc351a0af53
+  subpackages:
+  - query
+- name: github.com/tent/http-link-go
+  version: ac974c61c2f990f4115b119354b5e0b47550e888
+- name: golang.org/x/net
+  version: b336a971b799939dd16ae9b1df8334cb8b977c4d
+  subpackages:
+  - context
 - name: golang.org/x/oauth2
   version: 25b4fb1468cb89700c7c060cb99f30581a61f5e3
+  subpackages:
+  - internal
+- name: google.golang.org/appengine
+  version: 46239ca616842c00f41b8cbc6bbf2bd6ffbfcdad
+  subpackages:
+  - internal
+  - internal/base
+  - internal/datastore
+  - internal/log
+  - internal/remote_api
+  - internal/urlfetch
+  - urlfetch
 testImports: []
