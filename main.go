@@ -38,7 +38,7 @@ func main() {
 	tmpl.Execute(&doc, droplets)
 
 	output := UpdateHosts(string(original), doc.String())
-	ioutil.WriteFile("/etc/hosts.new", []byte(output), 0644)
+	ioutil.WriteFile("/etc/hosts", []byte(output), 0644)
 }
 
 // DropletListTags paginates through the digitalocean API to return a list of
