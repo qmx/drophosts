@@ -1,7 +1,9 @@
 package main
 
 import (
+	"bytes"
 	"html/template"
+	"io/ioutil"
 	"log"
 	"os"
 
@@ -27,8 +29,16 @@ func main() {
 	oauthClient := oauth2.NewClient(oauth2.NoContext, oauth2.StaticTokenSource(&oauth2.Token{AccessToken: accessToken}))
 	client := godo.NewClient(oauthClient)
 	droplets, _ := DropletListTags(client.Droplets, peerTag)
-	tmpl.Execute(os.Stdout, droplets)
 
+	original, err := ioutil.ReadFile("/etc/hosts")
+	if err != nil {
+		log.Fatal(err)
+	}
+	var doc bytes.Buffer
+	tmpl.Execute(&doc, droplets)
+
+	output := UpdateHosts(string(original), doc.String())
+	ioutil.WriteFile("/etc/hosts.new", []byte(output), 0644)
 }
 
 // DropletListTags paginates through the digitalocean API to return a list of
