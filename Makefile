@@ -16,7 +16,7 @@ release: clean build-amd64
 docker: clean build-amd64 docker-image
 
 docker-image: build-amd64
-	@docker build -t qmxme/drophosts:${DROPHOSTS_VERSION} .
+	@docker build -t qmxme/drophosts:${DROPHOSTS_VERSION} -t qmxme/drophosts:latest .
 
 push: docker-image
 	@docker push qmxme/drophosts:${DROPHOSTS_VERSION}
