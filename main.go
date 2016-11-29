@@ -22,9 +22,9 @@ func main() {
 		log.Fatal("Usage: DO_TAG environment variable must be set.")
 	}
 
-	tmpl, _ := template.New("test").Parse(`### drophosts ###
+	tmpl, _ := template.New("test").Parse(`## drophosts ##
 {{range .}}{{.PrivateIPv4}} {{.Name}}.kubelocal
-{{end}}### drophosts ###`)
+{{end}}## drophosts ##`)
 
 	oauthClient := oauth2.NewClient(oauth2.NoContext, oauth2.StaticTokenSource(&oauth2.Token{AccessToken: accessToken}))
 	client := godo.NewClient(oauthClient)
