@@ -13,9 +13,9 @@ release: clean build-amd64
 	@zip drophosts_${DROPHOSTS_VERSION}_linux_amd64.zip drophosts
 	@tar -cvzf drophosts_${DROPHOSTS_VERSION}_linux_amd64.tar.gz drophosts
 
-docker: build-amd64 docker-image clean
+docker: clean build-amd64 docker-image
 
-docker-image:
+docker-image: build-amd64
 	@docker build -t qmxme/drophosts:${DROPHOSTS_VERSION} .
 
 push: docker-image
